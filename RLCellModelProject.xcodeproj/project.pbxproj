@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED2CE5C51E20D91800A29E51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5C41E20D91800A29E51 /* main.m */; };
+		ED2CE5C81E20D91800A29E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5C71E20D91800A29E51 /* AppDelegate.m */; };
+		ED2CE5CB1E20D91800A29E51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5CA1E20D91800A29E51 /* ViewController.m */; };
+		ED2CE5CE1E20D91800A29E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5CC1E20D91800A29E51 /* Main.storyboard */; };
+		ED2CE5D01E20D91800A29E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5CF1E20D91800A29E51 /* Assets.xcassets */; };
+		ED2CE5D31E20D91800A29E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5D11E20D91800A29E51 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED2CE5C01E20D91800A29E51 /* RLCellModelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLCellModelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2CE5C41E20D91800A29E51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ED2CE5C61E20D91800A29E51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ED2CE5C71E20D91800A29E51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ED2CE5C91E20D91800A29E51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		ED2CE5CA1E20D91800A29E51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		ED2CE5CD1E20D91800A29E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED2CE5CF1E20D91800A29E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED2CE5D21E20D91800A29E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED2CE5D41E20D91800A29E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED2CE5BD1E20D91800A29E51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED2CE5B71E20D91800A29E51 = {
+			isa = PBXGroup;
+			children = (
+				ED2CE5C21E20D91800A29E51 /* RLCellModelProject */,
+				ED2CE5C11E20D91800A29E51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED2CE5C11E20D91800A29E51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CE5C01E20D91800A29E51 /* RLCellModelProject.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED2CE5C21E20D91800A29E51 /* RLCellModelProject */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CE5C61E20D91800A29E51 /* AppDelegate.h */,
+				ED2CE5C71E20D91800A29E51 /* AppDelegate.m */,
+				ED2CE5C91E20D91800A29E51 /* ViewController.h */,
+				ED2CE5CA1E20D91800A29E51 /* ViewController.m */,
+				ED2CE5CC1E20D91800A29E51 /* Main.storyboard */,
+				ED2CE5CF1E20D91800A29E51 /* Assets.xcassets */,
+				ED2CE5D11E20D91800A29E51 /* LaunchScreen.storyboard */,
+				ED2CE5D41E20D91800A29E51 /* Info.plist */,
+				ED2CE5C31E20D91800A29E51 /* Supporting Files */,
+			);
+			path = RLCellModelProject;
+			sourceTree = "<group>";
+		};
+		ED2CE5C31E20D91800A29E51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ED2CE5C41E20D91800A29E51 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED2CE5BF1E20D91800A29E51 /* RLCellModelProject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED2CE5D71E20D91800A29E51 /* Build configuration list for PBXNativeTarget "RLCellModelProject" */;
+			buildPhases = (
+				ED2CE5BC1E20D91800A29E51 /* Sources */,
+				ED2CE5BD1E20D91800A29E51 /* Frameworks */,
+				ED2CE5BE1E20D91800A29E51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RLCellModelProject;
+			productName = RLCellModelProject;
+			productReference = ED2CE5C01E20D91800A29E51 /* RLCellModelProject.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED2CE5B81E20D91800A29E51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = lwj;
+				TargetAttributes = {
+					ED2CE5BF1E20D91800A29E51 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ED2CE5BB1E20D91800A29E51 /* Build configuration list for PBXProject "RLCellModelProject" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED2CE5B71E20D91800A29E51;
+			productRefGroup = ED2CE5C11E20D91800A29E51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED2CE5BF1E20D91800A29E51 /* RLCellModelProject */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED2CE5BE1E20D91800A29E51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CE5D31E20D91800A29E51 /* LaunchScreen.storyboard in Resources */,
+				ED2CE5D01E20D91800A29E51 /* Assets.xcassets in Resources */,
+				ED2CE5CE1E20D91800A29E51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED2CE5BC1E20D91800A29E51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED2CE5CB1E20D91800A29E51 /* ViewController.m in Sources */,
+				ED2CE5C81E20D91800A29E51 /* AppDelegate.m in Sources */,
+				ED2CE5C51E20D91800A29E51 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED2CE5CC1E20D91800A29E51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2CE5CD1E20D91800A29E51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED2CE5D11E20D91800A29E51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED2CE5D21E20D91800A29E51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED2CE5D51E20D91800A29E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ED2CE5D61E20D91800A29E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED2CE5D81E20D91800A29E51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RLCellModelProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RL.RLCellModelProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ED2CE5D91E20D91800A29E51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = RLCellModelProject/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RL.RLCellModelProject;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED2CE5BB1E20D91800A29E51 /* Build configuration list for PBXProject "RLCellModelProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CE5D51E20D91800A29E51 /* Debug */,
+				ED2CE5D61E20D91800A29E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED2CE5D71E20D91800A29E51 /* Build configuration list for PBXNativeTarget "RLCellModelProject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED2CE5D81E20D91800A29E51 /* Debug */,
+				ED2CE5D91E20D91800A29E51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED2CE5B81E20D91800A29E51 /* Project object */;
+}
