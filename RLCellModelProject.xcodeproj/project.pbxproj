@@ -13,6 +13,10 @@
 		ED2CE5CE1E20D91800A29E51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5CC1E20D91800A29E51 /* Main.storyboard */; };
 		ED2CE5D01E20D91800A29E51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5CF1E20D91800A29E51 /* Assets.xcassets */; };
 		ED2CE5D31E20D91800A29E51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2CE5D11E20D91800A29E51 /* LaunchScreen.storyboard */; };
+		EDC9E78D1EA4FF6600A47A4B /* RLCellModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E7891EA4FF6600A47A4B /* RLCellModelManager.m */; };
+		EDC9E78E1EA4FF6600A47A4B /* RLCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E78B1EA4FF6600A47A4B /* RLCellModel.m */; };
+		EDC9E7921EA5004F00A47A4B /* RLMineInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDC9E78F1EA5004F00A47A4B /* RLMineInfoTableViewCell.xib */; };
+		EDC9E7931EA5004F00A47A4B /* RLMineInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC9E7901EA5004F00A47A4B /* RLMineInfoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		ED2CE5CF1E20D91800A29E51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED2CE5D21E20D91800A29E51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED2CE5D41E20D91800A29E51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC9E7891EA4FF6600A47A4B /* RLCellModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCellModelManager.m; sourceTree = "<group>"; };
+		EDC9E78A1EA4FF6600A47A4B /* RLCellModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCellModelManager.h; sourceTree = "<group>"; };
+		EDC9E78B1EA4FF6600A47A4B /* RLCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCellModel.m; sourceTree = "<group>"; };
+		EDC9E78C1EA4FF6600A47A4B /* RLCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCellModel.h; sourceTree = "<group>"; };
+		EDC9E78F1EA5004F00A47A4B /* RLMineInfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLMineInfoTableViewCell.xib; sourceTree = "<group>"; };
+		EDC9E7901EA5004F00A47A4B /* RLMineInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLMineInfoTableViewCell.m; sourceTree = "<group>"; };
+		EDC9E7911EA5004F00A47A4B /* RLMineInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLMineInfoTableViewCell.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,10 @@
 		ED2CE5C21E20D91800A29E51 /* RLCellModelProject */ = {
 			isa = PBXGroup;
 			children = (
+				EDC9E78F1EA5004F00A47A4B /* RLMineInfoTableViewCell.xib */,
+				EDC9E7901EA5004F00A47A4B /* RLMineInfoTableViewCell.m */,
+				EDC9E7911EA5004F00A47A4B /* RLMineInfoTableViewCell.h */,
+				ED2CE5DA1E20D94E00A29E51 /* RLCellModel */,
 				ED2CE5C61E20D91800A29E51 /* AppDelegate.h */,
 				ED2CE5C71E20D91800A29E51 /* AppDelegate.m */,
 				ED2CE5C91E20D91800A29E51 /* ViewController.h */,
@@ -77,6 +92,17 @@
 				ED2CE5C41E20D91800A29E51 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ED2CE5DA1E20D94E00A29E51 /* RLCellModel */ = {
+			isa = PBXGroup;
+			children = (
+				EDC9E7891EA4FF6600A47A4B /* RLCellModelManager.m */,
+				EDC9E78A1EA4FF6600A47A4B /* RLCellModelManager.h */,
+				EDC9E78B1EA4FF6600A47A4B /* RLCellModel.m */,
+				EDC9E78C1EA4FF6600A47A4B /* RLCellModel.h */,
+			);
+			path = RLCellModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2CE5D31E20D91800A29E51 /* LaunchScreen.storyboard in Resources */,
+				EDC9E7921EA5004F00A47A4B /* RLMineInfoTableViewCell.xib in Resources */,
 				ED2CE5D01E20D91800A29E51 /* Assets.xcassets in Resources */,
 				ED2CE5CE1E20D91800A29E51 /* Main.storyboard in Resources */,
 			);
@@ -150,7 +177,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC9E78E1EA4FF6600A47A4B /* RLCellModel.m in Sources */,
+				EDC9E7931EA5004F00A47A4B /* RLMineInfoTableViewCell.m in Sources */,
 				ED2CE5CB1E20D91800A29E51 /* ViewController.m in Sources */,
+				EDC9E78D1EA4FF6600A47A4B /* RLCellModelManager.m in Sources */,
 				ED2CE5C81E20D91800A29E51 /* AppDelegate.m in Sources */,
 				ED2CE5C51E20D91800A29E51 /* main.m in Sources */,
 			);
@@ -307,6 +337,7 @@
 				ED2CE5D91E20D91800A29E51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

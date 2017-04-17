@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RLMineInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LC2-gI-ASu">
+                        <rect key="frame" x="10" y="43.5" width="31" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="754" image="icon_mine_arrow_grey" translatesAutoresizingMaskIntoConstraints="NO" id="aNH-YX-qsh">
+                        <rect key="frame" x="302" y="46.5" width="6" height="11"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="753" text="Richard" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDR-Mt-LxH">
+                        <rect key="frame" x="240.5" y="43.5" width="52.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKe-6t-hhm">
+                        <rect key="frame" x="10" y="104" width="310" height="0.5"/>
+                        <color key="backgroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="fmZ-vV-gxN"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mine_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="Yek-LI-G9T">
+                        <rect key="frame" x="267" y="39.5" width="26" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="26" id="QTH-Ii-rr3"/>
+                            <constraint firstAttribute="height" constant="26" id="S7P-9z-DsB"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="nia-fR-jf0">
+                        <rect key="frame" x="228" y="19.5" width="65" height="65"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="65" id="MRu-5r-vPS"/>
+                            <constraint firstAttribute="height" constant="65" id="hUt-oc-RsN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="LC2-gI-ASu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="0Jf-Zd-k8d"/>
+                    <constraint firstItem="aNH-YX-qsh" firstAttribute="leading" secondItem="nia-fR-jf0" secondAttribute="trailing" constant="9" id="0u5-ZF-Crh"/>
+                    <constraint firstItem="aNH-YX-qsh" firstAttribute="leading" secondItem="Yek-LI-G9T" secondAttribute="trailing" constant="9" id="2th-CO-M3C"/>
+                    <constraint firstAttribute="trailing" secondItem="aKe-6t-hhm" secondAttribute="trailing" id="5Ou-R5-OOJ"/>
+                    <constraint firstItem="aNH-YX-qsh" firstAttribute="centerY" secondItem="LC2-gI-ASu" secondAttribute="centerY" id="EOv-bg-NCD"/>
+                    <constraint firstItem="LC2-gI-ASu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GMj-dC-oF2"/>
+                    <constraint firstItem="JDR-Mt-LxH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="LC2-gI-ASu" secondAttribute="trailing" constant="10" id="HcH-Zk-cTg"/>
+                    <constraint firstItem="aKe-6t-hhm" firstAttribute="leading" secondItem="LC2-gI-ASu" secondAttribute="leading" id="MaZ-1T-QE3"/>
+                    <constraint firstItem="Yek-LI-G9T" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Rhw-6d-7fS"/>
+                    <constraint firstItem="aNH-YX-qsh" firstAttribute="leading" secondItem="JDR-Mt-LxH" secondAttribute="trailing" constant="9" id="dnN-vy-C9w"/>
+                    <constraint firstAttribute="bottom" secondItem="aKe-6t-hhm" secondAttribute="bottom" id="g44-b1-zcX"/>
+                    <constraint firstItem="JDR-Mt-LxH" firstAttribute="centerY" secondItem="LC2-gI-ASu" secondAttribute="centerY" id="nHN-uW-rke"/>
+                    <constraint firstAttribute="trailing" secondItem="aNH-YX-qsh" secondAttribute="trailing" constant="12" id="qoa-rH-TIa"/>
+                    <constraint firstItem="nia-fR-jf0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="xdm-cd-scf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="nia-fR-jf0" id="ogM-Gi-Gow"/>
+                <outlet property="defaultLabel" destination="JDR-Mt-LxH" id="FP2-ub-XZ2"/>
+                <outlet property="qrCodeImageView" destination="Yek-LI-G9T" id="BtR-5P-pKY"/>
+                <outlet property="rightArrowImageView" destination="aNH-YX-qsh" id="RvF-7t-nY6"/>
+                <outlet property="titleLabel" destination="LC2-gI-ASu" id="z93-kO-8IX"/>
+            </connections>
+            <point key="canvasLocation" x="-982" y="-740"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_mine_arrow_grey" width="6" height="11"/>
+        <image name="icon_mine_qrcode" width="19" height="18"/>
+        <image name="logo" width="50" height="50"/>
+    </resources>
+</document>
