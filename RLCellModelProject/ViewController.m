@@ -71,6 +71,9 @@
     RLCellModel *avatar = [RLCellModel new];
     avatar.cellGenerateRuleDict = @{@"cellType":@(GeneralTypeAvatar),
                                     @"title":@"头像",};
+    avatar.dynamicCellHeightBlock = ^NSNumber *(NSIndexPath *indexPath) {
+        return @(200);
+    };
     avatar.cellHeight = @([RLMineInfoTableViewCell cellHeightWithExtra]);
     avatar.cellSelectedBlock = ^{
         

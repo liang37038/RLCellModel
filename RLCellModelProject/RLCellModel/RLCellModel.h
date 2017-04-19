@@ -12,6 +12,8 @@ typedef void(^RLVoldBlock)();
 
 typedef void(^RLRefreshBlock)(id cell, ...);
 
+typedef NSNumber *(^RLDynamicCellHeightBlock)(NSIndexPath *indexPath);
+
 @interface RLCellModel : NSObject
 
 
@@ -33,6 +35,13 @@ typedef void(^RLRefreshBlock)(id cell, ...);
  Cell被刷新的时候触发的Block
  */
 @property (copy, nonatomic) RLRefreshBlock refreshBlock;
+
+
+/**
+ 当需要动态计算某个Cell的高度时候，实现这个Block，会在UITableView的计算高度Delegate中得到调用
+ 优先级 dynamicCellHeightBlock > cellHeight > RLCellModelManager's globalHeight
+ */
+@property (copy, nonatomic) RLDynamicCellHeightBlock dynamicCellHeightBlock;
 
 
 /**

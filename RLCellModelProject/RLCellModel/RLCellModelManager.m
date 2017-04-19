@@ -65,7 +65,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+
     RLCellModel *cellModel = [self cellModelAtIndexPath:indexPath];
     
     UITableViewCell *cell = nil;
@@ -105,7 +105,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     RLCellModel *cellModel = [self cellModelAtIndexPath:indexPath];
-    if (cellModel.cellHeight.floatValue != 0) {
+    if (cellModel.dynamicCellHeightBlock) {
+        return cellModel.dynamicCellHeightBlock(indexPath).floatValue;
+    }else if (cellModel.cellHeight.floatValue != 0) {
         return cellModel.cellHeight.floatValue;
     }else{
         return _globalHeight;

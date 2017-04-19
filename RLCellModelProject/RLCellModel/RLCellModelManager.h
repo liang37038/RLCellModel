@@ -23,7 +23,7 @@
 
 typedef void(^GlobalReuseCellBlock)(id cell, RLCellModel *cellModel);
 
-typedef RLCellModel *(^CustomExtractCellModelBlock)(NSArray *cellModels, NSIndexPath *indexPath);
+typedef RLCellModel *(^CustomExtractCellModelBlock)(NSArray *datasource, NSIndexPath *indexPath);
 
 @interface RLCellModelManager : NSObject<UITableViewDelegate, UITableViewDataSource>
 
