@@ -1,5 +1,7 @@
 # RLCellModel
 
+**An elegant way to create an infomation TableView**
+
 **INSTALL**
 
 ```
@@ -7,7 +9,8 @@ pod 'RLCellModel'
 ```
 
 ---
-**An elegant way to create an infomation TableView**
+
+##Why do you need this
 
 In old days to create different function of rows in a TableView, you need to distinguish row function by **indexPath** , just like these:
 
@@ -31,18 +34,17 @@ But with this **RLCellModelManager**, you can just
 * Easy way to ADD or DELETE or MOVE any items in TableView
 
 ---
-Here is THE CODE:
+###OK, Let's do this
+
+**Here is THE CODE:**
+
+> First of all, do some global setting
 
 ```
 self.cellModelManager = [[RLCellModelManager alloc]
-//Sometimes you just need one TableViewCell
-//but you could override it with your specific RLCellModel
 initWithGlobalCellIdentifier:NSStringFromClass([RLMineInfoTableViewCell class]) 
-//Sometimes you just need one Cell Height, 
-//but you could override it with your specific RLCellModel
 globalHeight:[RLMineInfoTableViewCell cellHeight]
 globalReuseCellBlock:^(RLMineInfoTableViewCell *cell, RLCellModel *cellModel) {
-
         //Do things you used to do in 
         //- (UITableViewCell *)tableView:(UITableView *)tableView
         //cellForRowAtIndexPath:(NSIndexPath *)indexPath;
@@ -65,7 +67,7 @@ self.tableView.delegate = self.cellModelManager;
 self.tableView.dataSource = self.cellModelManager;
 ```
 
-Let's see how to implement a row
+> Let's see how to implement a row
 
 ```
 //One Model represent a single Cell
@@ -81,12 +83,17 @@ avatar.cellSelectedBlock = ^{
     //This block will trigger When the cell selected        
 };
 
-avatar.refreshBlock = ^(id cell){
+avatar.cellRefreshBlock = ^(id cell){
     //This block will override the manager's global reuseBlock (only this row)
 };
 
-//Continue to create other cellModels
+avatar.dynamicCellHeightBlock = ^(NSNumber *)(NSIndexPath *indexPath){
+    //This block will call in
+    //- (CGFloat)tableView:(UITableView *)tableView 
+    //heightForRowAtIndexPath:(NSIndexPath *)indexPath
+}
 
+//Continue to create other cellModels
 NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[@[avatar, userName, realName, code,gender, qrcode],@[phone, cardNumber, recommandPerson]]];
 //Just give the datasource to manager, then reload
 self.cellModelManager.cellModels = datasource;
@@ -94,7 +101,7 @@ self.cellModelManager.cellModels = datasource;
 
 ```
 
-Here is screenshot of example:
+**Here is screenshot of example:**
 ![](https://ww4.sinaimg.cn/large/006tNbRwgy1feq2pkyrgsj30ku12a0ui.jpg)
 
 
