@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 typedef void(^RLVoldBlock)();
 
-typedef void(^RLRefreshBlock)(id cell, ...);
+typedef void(^RLRefreshBlock)(id cell, id boundModelIfExisted);
 
 typedef NSNumber *(^RLDynamicCellHeightBlock)(NSIndexPath *indexPath);
 
@@ -34,7 +35,7 @@ typedef NSNumber *(^RLDynamicCellHeightBlock)(NSIndexPath *indexPath);
 /**
  Cell被刷新的时候触发的Block
  */
-@property (copy, nonatomic) RLRefreshBlock refreshBlock;
+@property (copy, nonatomic) RLRefreshBlock cellRefreshBlock;
 
 
 /**
@@ -47,6 +48,8 @@ typedef NSNumber *(^RLDynamicCellHeightBlock)(NSIndexPath *indexPath);
 /**
  每个Cell对应的Cell Height
  */
-@property (strong, nonatomic) NSNumber *cellHeight;
+@property (assign, nonatomic) CGFloat cellHeight;
+
+@property (strong, nonatomic) id boundModel;
 
 @end

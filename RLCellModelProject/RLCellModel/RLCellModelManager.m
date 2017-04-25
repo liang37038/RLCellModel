@@ -76,8 +76,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:_globalIdentifier forIndexPath:indexPath];
     }
     
-    if (cellModel.refreshBlock) {
-        cellModel.refreshBlock(cell);
+    if (cellModel.cellRefreshBlock) {
+        cellModel.cellRefreshBlock(cell, cellModel.boundModel);
     }else{
         if (_globalReuseCellBlock) {
             _globalReuseCellBlock(cell, cellModel);
@@ -107,8 +107,8 @@
     RLCellModel *cellModel = [self cellModelAtIndexPath:indexPath];
     if (cellModel.dynamicCellHeightBlock) {
         return cellModel.dynamicCellHeightBlock(indexPath).floatValue;
-    }else if (cellModel.cellHeight.floatValue != 0) {
-        return cellModel.cellHeight.floatValue;
+    }else if (cellModel.cellHeight != 0) {
+        return cellModel.cellHeight;
     }else{
         return _globalHeight;
     }

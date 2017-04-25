@@ -74,7 +74,7 @@
     avatar.dynamicCellHeightBlock = ^NSNumber *(NSIndexPath *indexPath) {
         return @(200);
     };
-    avatar.cellHeight = @([RLMineInfoTableViewCell cellHeightWithExtra]);
+    avatar.cellHeight = [RLMineInfoTableViewCell cellHeightWithExtra];
     avatar.cellSelectedBlock = ^{
         
     };

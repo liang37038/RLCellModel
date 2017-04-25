@@ -1,5 +1,13 @@
 # RLCellModel
-An elegant way to create an infomation TableView
+
+**INSTALL**
+
+```
+pod 'RLCellModel'
+```
+
+---
+**An elegant way to create an infomation TableView**
 
 In old days to create different function of rows in a TableView, you need to distinguish row function by **indexPath** , just like these:
 
