@@ -4,11 +4,11 @@
 
 **INSTALL**
 
-```
-pod 'RLCellModel'
-```
+> Pod
 
----
+```
+pod 'RLCellModel', '~> 1.0.0'
+```
 
 ##Why do you need this
 
@@ -93,7 +93,9 @@ avatar.dynamicCellHeightBlock = ^(NSNumber *)(NSIndexPath *indexPath){
     //heightForRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
-//Continue to create other cellModels
+/**
+  * Continue to create other cellModels
+  */
 NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[@[avatar, userName, realName, code,gender, qrcode],@[phone, cardNumber, recommandPerson]]];
 //Just give the datasource to manager, then reload
 self.cellModelManager.cellModels = datasource;
