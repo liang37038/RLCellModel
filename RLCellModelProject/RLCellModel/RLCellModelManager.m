@@ -77,7 +77,7 @@
     }
     
     if (cellModel.cellRefreshBlock) {
-        cellModel.cellRefreshBlock(cell, cellModel.boundModel);
+        cellModel.cellRefreshBlock(cell, cellModel.boundModel, indexPath);
     }else{
         if (_globalReuseCellBlock) {
             _globalReuseCellBlock(cell, cellModel, indexPath);

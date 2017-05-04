@@ -11,7 +11,7 @@
 
 typedef void(^RLVoldBlock)();
 
-typedef void(^RLRefreshBlock)(id cell, id boundModelIfExisted);
+typedef void(^RLRefreshBlock)(id cell, id boundModelIfExisted, NSIndexPath *indexPath);
 
 typedef NSNumber *(^RLDynamicCellHeightBlock)(NSIndexPath *indexPath);
 
