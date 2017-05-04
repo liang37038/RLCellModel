@@ -80,7 +80,7 @@
         cellModel.cellRefreshBlock(cell, cellModel.boundModel);
     }else{
         if (_globalReuseCellBlock) {
-            _globalReuseCellBlock(cell, cellModel);
+            _globalReuseCellBlock(cell, cellModel, indexPath);
         }
     }
     

@@ -21,7 +21,7 @@
 
 @end
 
-typedef void(^GlobalReuseCellBlock)(id cell, RLCellModel *cellModel);
+typedef void(^GlobalReuseCellBlock)(id cell, RLCellModel *cellModel, NSIndexPath *indexPath);
 
 typedef RLCellModel *(^CustomExtractCellModelBlock)(NSArray *datasource, NSIndexPath *indexPath);
 
