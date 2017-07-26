@@ -14,6 +14,8 @@
 
 @optional
 - (void)rl_scrollViewDidScroll:(UIScrollView *)scrollView;
+- (void)tableView:(UITableView *)tableView rl_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView rl_didDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)tableView:(UITableView *)tableView rl_heightForFooterInSection:(NSInteger)section;
 - (CGFloat)tableView:(UITableView *)tableView rl_heightForHeaderInSection:(NSInteger)section;
 - (UIView *)tableView:(UITableView *)tableView rl_viewForHeaderInSection:(NSInteger)section;

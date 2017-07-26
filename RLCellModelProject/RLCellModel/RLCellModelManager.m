@@ -118,7 +118,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     RLCellModel *cellModel = [self cellModelAtIndexPath:indexPath];
     if (cellModel.cellSelectedBlock) {
-        cellModel.cellSelectedBlock();
+        cellModel.cellSelectedBlock(nil, cellModel.boundModel, indexPath);
+    }
+    if (self.delegate && [self.delegate respondsToSelector:@selector(tableView:rl_didSelectRowAtIndexPath:)]) {
+        [self.delegate tableView:tableView rl_didSelectRowAtIndexPath:indexPath];
     }
 }
 
