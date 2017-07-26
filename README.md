@@ -7,7 +7,7 @@
 > Pod
 
 ```
-pod 'RLCellModel', '~> 1.0.0'
+pod 'RLCellModel', '~> 1.0.3'
 ```
 
 ##Why do you need this
