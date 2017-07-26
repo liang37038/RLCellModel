@@ -45,9 +45,6 @@ self.cellModelManager = [[RLCellModelManager alloc]
 initWithGlobalCellIdentifier:NSStringFromClass([RLMineInfoTableViewCell class]) 
 globalHeight:[RLMineInfoTableViewCell cellHeight]
 globalReuseCellBlock:^(RLMineInfoTableViewCell *cell, RLCellModel *cellModel) {
-        //Do things you used to do in 
-        //- (UITableViewCell *)tableView:(UITableView *)tableView
-        //cellForRowAtIndexPath:(NSIndexPath *)indexPath;
         NSDictionary *cellDict = cellModel.cellGenerateRuleDict;
         NSString *title = [cellDict objectForKey:@"title"];
         NSNumber *cellType = [cellDict objectForKey:@"cellType"];
@@ -55,10 +52,6 @@ globalReuseCellBlock:^(RLMineInfoTableViewCell *cell, RLCellModel *cellModel) {
         cell.titleLabel.text = title;
     }
     customExtractCellModelBlock:^RLCellModel *(NSArray *cellModels, NSIndexPath *indexPath) {
-        //Sometimes your TableView does not just have one section
-        //(if you have one, just set this block to nil),
-        //this Manager need to know how to extract cellModel from datasource
-        //to do boring things for you
         return [[cellModels objectAtIndex:indexPath.section]objectAtIndex:indexPath.row];
     }];
     
@@ -73,34 +66,31 @@ self.tableView.dataSource = self.cellModelManager;
 //One Model represent a single Cell
 RLCellModel *avatar = [RLCellModel new];
 
-//You can retrieve this Dict in RLCellModelManager's GlobalReuseCellBlock 
 avatar.cellGenerateRuleDict = @{@"cellType":@(GeneralTypeAvatar),
                                     @"title":@"头像",};
-//If you set this property, it will override the manager's global height (only this row)
+
 avatar.cellHeight = @([RLMineInfoTableViewCell cellHeightWithExtra]);
 
 avatar.cellSelectedBlock = ^{
-    //This block will trigger When the cell selected        
 };
 
 avatar.cellRefreshBlock = ^(id cell){
-    //This block will override the manager's global reuseBlock (only this row)
 };
 
 avatar.dynamicCellHeightBlock = ^(NSNumber *)(NSIndexPath *indexPath){
-    //This block will call in
-    //- (CGFloat)tableView:(UITableView *)tableView 
-    //heightForRowAtIndexPath:(NSIndexPath *)indexPath
 }
 
-/**
-  * Continue to create other cellModels
-  */
-NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[@[avatar, userName, realName, code,gender, qrcode],@[phone, cardNumber, recommandPerson]]];
-//Just give the datasource to manager, then reload
-self.cellModelManager.cellModels = datasource;
-[self.tableView reloadData];
+```
+> Final step
 
+```
+NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[
+@[avatar, userName, realName, code,gender, qrcode],
+@[phone, cardNumber, recommandPerson]]];
+
+self.cellModelManager.cellModels = datasource;
+
+[self.tableView reloadData];
 ```
 
 **Here is screenshot of example:**
