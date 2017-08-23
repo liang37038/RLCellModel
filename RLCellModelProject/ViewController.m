@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "RLMineInfoTableViewCell.h"
+#import "RLDynamicHeightTableViewCell.h"
 #import "RLCellModelManager.h"
 
 @interface ViewController ()<RLCellModelManagerDelegate>
@@ -43,8 +44,10 @@
 - (void)setupTableView{
     self.tableView.tableFooterView = [[UIView alloc]init];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RLMineInfoTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([RLMineInfoTableViewCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([RLDynamicHeightTableViewCell class]) bundle:[NSBundle mainBundle]] forCellReuseIdentifier:NSStringFromClass([RLDynamicHeightTableViewCell class])];
     
-    self.cellModelManager = [[RLCellModelManager alloc]initWithGlobalCellIdentifier:NSStringFromClass([RLMineInfoTableViewCell class]) globalHeight:[RLMineInfoTableViewCell cellHeight] globalReuseCellBlock:^(RLMineInfoTableViewCell *cell, RLCellModel *cellModel) {
+    
+    self.cellModelManager = [[RLCellModelManager alloc]initWithGlobalCellIdentifier:NSStringFromClass([RLMineInfoTableViewCell class]) globalHeight:[RLMineInfoTableViewCell cellHeight] globalReuseCellBlock:^(RLMineInfoTableViewCell *cell, RLCellModel *cellModel, NSIndexPath *indexPath) {
         NSDictionary *cellDict = cellModel.cellGenerateRuleDict;
         NSString *title = [cellDict objectForKey:@"title"];
         NSNumber *cellType = [cellDict objectForKey:@"cellType"];
@@ -68,6 +71,14 @@
 }
 
 - (void)setupCellModels{
+    
+    RLCellModel *dynamicCell = [[RLCellModel alloc]init];
+    dynamicCell.cellHeight = UITableViewAutomaticDimension;
+    dynamicCell.cellIdentifier = NSStringFromClass([RLDynamicHeightTableViewCell class]);
+    dynamicCell.cellRefreshBlock = ^(RLDynamicHeightTableViewCell *cell, id boundModelIfExisted, NSIndexPath *indexPath) {
+        cell.contentLabel.text = @"这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊这特么就是内容啊";
+    };
+    
     RLCellModel *avatar = [RLCellModel new];
     avatar.cellGenerateRuleDict = @{@"cellType":@(GeneralTypeAvatar),
                                     @"title":@"头像",};
@@ -127,7 +138,7 @@
         
     };
     
-    NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[@[avatar, userName, realName, code,gender, qrcode],@[phone, cardNumber, recommandPerson]]];
+    NSMutableArray *datasource = [NSMutableArray arrayWithArray:@[@[dynamicCell], @[avatar, userName, realName, code,gender, qrcode],@[phone, cardNumber, recommandPerson]]];
     self.cellModelManager.cellModels = datasource;
     [self.tableView reloadData];
 }

@@ -7,6 +7,7 @@
 //
 
 #import "RLCellModelManager.h"
+#import "UITableView+FDTemplateLayoutCell.h"
 
 @implementation RLCellModelManager
 {
@@ -107,7 +108,13 @@
     RLCellModel *cellModel = [self cellModelAtIndexPath:indexPath];
     if (cellModel.dynamicCellHeightBlock) {
         return cellModel.dynamicCellHeightBlock(indexPath).floatValue;
-    }else if (cellModel.cellHeight != 0) {
+    }else if(cellModel.cellHeight == UITableViewAutomaticDimension){
+        return [tableView fd_heightForCellWithIdentifier:cellModel.cellIdentifier configuration:^(id cell) {
+            if (cellModel.cellRefreshBlock) {
+                cellModel.cellRefreshBlock(cell, nil, indexPath);
+            }
+        }];
+    }else if (cellModel.cellHeight!=0) {
         return cellModel.cellHeight;
     }else{
         return _globalHeight;

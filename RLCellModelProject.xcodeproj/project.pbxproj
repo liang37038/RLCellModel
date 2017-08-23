@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79AEFB881F4D84AA005608CD /* RLDynamicHeightTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AEFB861F4D84AA005608CD /* RLDynamicHeightTableViewCell.m */; };
+		79AEFB891F4D84AA005608CD /* RLDynamicHeightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79AEFB871F4D84AA005608CD /* RLDynamicHeightTableViewCell.xib */; };
+		7BAE5DED49FC8C69AD83F6FB /* libPods-RLCellModelProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E96B50DE8FA9DF3942FB0F91 /* libPods-RLCellModelProject.a */; };
 		ED2CE5C51E20D91800A29E51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5C41E20D91800A29E51 /* main.m */; };
 		ED2CE5C81E20D91800A29E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5C71E20D91800A29E51 /* AppDelegate.m */; };
 		ED2CE5CB1E20D91800A29E51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED2CE5CA1E20D91800A29E51 /* ViewController.m */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6902CCCFFA348F78224DCD87 /* Pods-RLCellModelProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLCellModelProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-RLCellModelProject/Pods-RLCellModelProject.release.xcconfig"; sourceTree = "<group>"; };
+		79AEFB851F4D84AA005608CD /* RLDynamicHeightTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLDynamicHeightTableViewCell.h; sourceTree = "<group>"; };
+		79AEFB861F4D84AA005608CD /* RLDynamicHeightTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLDynamicHeightTableViewCell.m; sourceTree = "<group>"; };
+		79AEFB871F4D84AA005608CD /* RLDynamicHeightTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLDynamicHeightTableViewCell.xib; sourceTree = "<group>"; };
+		D70370E3016BAD630B778B6F /* Pods-RLCellModelProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RLCellModelProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RLCellModelProject/Pods-RLCellModelProject.debug.xcconfig"; sourceTree = "<group>"; };
+		E96B50DE8FA9DF3942FB0F91 /* libPods-RLCellModelProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RLCellModelProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2CE5C01E20D91800A29E51 /* RLCellModelProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLCellModelProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2CE5C41E20D91800A29E51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ED2CE5C61E20D91800A29E51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,17 +53,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAE5DED49FC8C69AD83F6FB /* libPods-RLCellModelProject.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207BFD924672D31F78AECF3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E96B50DE8FA9DF3942FB0F91 /* libPods-RLCellModelProject.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		22263F66D5A50C32AFBBB404 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D70370E3016BAD630B778B6F /* Pods-RLCellModelProject.debug.xcconfig */,
+				6902CCCFFA348F78224DCD87 /* Pods-RLCellModelProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		ED2CE5B71E20D91800A29E51 = {
 			isa = PBXGroup;
 			children = (
 				ED2CE5C21E20D91800A29E51 /* RLCellModelProject */,
 				ED2CE5C11E20D91800A29E51 /* Products */,
+				22263F66D5A50C32AFBBB404 /* Pods */,
+				207BFD924672D31F78AECF3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +111,9 @@
 				ED2CE5D11E20D91800A29E51 /* LaunchScreen.storyboard */,
 				ED2CE5D41E20D91800A29E51 /* Info.plist */,
 				ED2CE5C31E20D91800A29E51 /* Supporting Files */,
+				79AEFB851F4D84AA005608CD /* RLDynamicHeightTableViewCell.h */,
+				79AEFB861F4D84AA005608CD /* RLDynamicHeightTableViewCell.m */,
+				79AEFB871F4D84AA005608CD /* RLDynamicHeightTableViewCell.xib */,
 			);
 			path = RLCellModelProject;
 			sourceTree = "<group>";
@@ -112,9 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2CE5D71E20D91800A29E51 /* Build configuration list for PBXNativeTarget "RLCellModelProject" */;
 			buildPhases = (
+				AE2602416CC442533717E3B4 /* [CP] Check Pods Manifest.lock */,
 				ED2CE5BC1E20D91800A29E51 /* Sources */,
 				ED2CE5BD1E20D91800A29E51 /* Frameworks */,
 				ED2CE5BE1E20D91800A29E51 /* Resources */,
+				66F1065953806FC026022B5B /* [CP] Embed Pods Frameworks */,
+				8FFA41A10B619BF9F0AD7BB1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +171,7 @@
 				TargetAttributes = {
 					ED2CE5BF1E20D91800A29E51 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6S7U232JWV;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,11 +202,63 @@
 				ED2CE5D31E20D91800A29E51 /* LaunchScreen.storyboard in Resources */,
 				EDC9E7921EA5004F00A47A4B /* RLMineInfoTableViewCell.xib in Resources */,
 				ED2CE5D01E20D91800A29E51 /* Assets.xcassets in Resources */,
+				79AEFB891F4D84AA005608CD /* RLDynamicHeightTableViewCell.xib in Resources */,
 				ED2CE5CE1E20D91800A29E51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66F1065953806FC026022B5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLCellModelProject/Pods-RLCellModelProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8FFA41A10B619BF9F0AD7BB1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RLCellModelProject/Pods-RLCellModelProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE2602416CC442533717E3B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RLCellModelProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ED2CE5BC1E20D91800A29E51 /* Sources */ = {
@@ -178,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDC9E78E1EA4FF6600A47A4B /* RLCellModel.m in Sources */,
+				79AEFB881F4D84AA005608CD /* RLDynamicHeightTableViewCell.m in Sources */,
 				EDC9E7931EA5004F00A47A4B /* RLMineInfoTableViewCell.m in Sources */,
 				ED2CE5CB1E20D91800A29E51 /* ViewController.m in Sources */,
 				EDC9E78D1EA4FF6600A47A4B /* RLCellModelManager.m in Sources */,
@@ -298,8 +387,10 @@
 		};
 		ED2CE5D81E20D91800A29E51 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D70370E3016BAD630B778B6F /* Pods-RLCellModelProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S7U232JWV;
 				INFOPLIST_FILE = RLCellModelProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RL.RLCellModelProject;
@@ -309,8 +400,10 @@
 		};
 		ED2CE5D91E20D91800A29E51 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6902CCCFFA348F78224DCD87 /* Pods-RLCellModelProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S7U232JWV;
 				INFOPLIST_FILE = RLCellModelProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = RL.RLCellModelProject;
