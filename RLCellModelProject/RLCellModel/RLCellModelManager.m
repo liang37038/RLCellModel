@@ -37,6 +37,42 @@
     }
 }
 
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewWillBeginDragging:)]) {
+        [self.delegate rl_scrollViewWillBeginDragging:scrollView];
+    }
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewWillEndDragging:withVelocity:targetContentOffset:)]) {
+        [self.delegate rl_scrollViewWillEndDragging:scrollView withVelocity:velocity targetContentOffset:targetContentOffset];
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewDidEndDragging:willDecelerate:)]) {
+        [self.delegate rl_scrollViewDidEndDragging:scrollView willDecelerate:decelerate];
+    }
+}
+
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewWillBeginDecelerating:)]) {
+        [self.delegate rl_scrollViewWillBeginDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewDidEndDecelerating:)]) {
+        [self.delegate rl_scrollViewDidEndDecelerating:scrollView];
+    }
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rl_scrollViewDidEndScrollingAnimation:)]) {
+        [self.delegate rl_scrollViewDidEndScrollingAnimation:scrollView];
+    }
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     if (self.delegate && [self.delegate respondsToSelector:@selector(tableView:rl_viewForHeaderInSection:)]) {
         return [self.delegate tableView:tableView rl_viewForHeaderInSection:section];
@@ -109,7 +145,7 @@
     if (cellModel.dynamicCellHeightBlock) {
         return cellModel.dynamicCellHeightBlock(indexPath).floatValue;
     }else if(cellModel.cellHeight == UITableViewAutomaticDimension){
-        return [tableView fd_heightForCellWithIdentifier:cellModel.cellIdentifier configuration:^(id cell) {
+        return [tableView fd_heightForCellWithIdentifier:cellModel.cellIdentifier cacheByIndexPath:indexPath configuration:^(id cell) {
             if (cellModel.cellRefreshBlock) {
                 cellModel.cellRefreshBlock(cell, nil, indexPath);
             }

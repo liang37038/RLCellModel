@@ -14,6 +14,13 @@
 
 @optional
 - (void)rl_scrollViewDidScroll:(UIScrollView *)scrollView;
+- (void)rl_scrollViewWillBeginDragging:(UIScrollView *)scrollView;
+- (void)rl_scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset;
+- (void)rl_scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate;
+- (void)rl_scrollViewWillBeginDecelerating:(UIScrollView *)scrollView;
+- (void)rl_scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void)rl_scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView;
+
 - (void)tableView:(UITableView *)tableView rl_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (void)tableView:(UITableView *)tableView rl_didDeselectRowAtIndexPath:(NSIndexPath *)indexPath;
 - (CGFloat)tableView:(UITableView *)tableView rl_heightForFooterInSection:(NSInteger)section;
